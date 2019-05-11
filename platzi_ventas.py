@@ -29,6 +29,8 @@ elif opcion.upper()=='U':
     if activo(client_name) ==True:
         print("isert the new name ")
         client_new_name = get_name()
+        New_Clients=clients.replace(client_name,client_new_name)
+        print(New_Clients)
     else:
         print("sorry!!,that name doesn't exist")
 
