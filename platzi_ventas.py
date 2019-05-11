@@ -10,6 +10,11 @@ opcion=input("Escribe la opcion")
 def get_name():
     client_name=input("Ingresa el nombre del cliente -")
     return client_name
+def activo(name):
+    if name in clients:
+        return true
+    else:
+        return false
 
 if opcion.upper()=='C':
     client_name=get_name()
@@ -17,8 +22,13 @@ if opcion.upper()=='C':
     print(clients)
 elif opcion.upper()=='R':
     print(clients)
+
 elif opcion.upper()=='U':
-    client_name=get_name()
+    if activo ==true:
+        print("Hello!!, insert the name of person to replace")
+        client_name = get_name()
+        print("isert the new name ")
+        client_new_name = get_name()
 
 elif opcion.upper()=='D':
     client_name=get_name()
