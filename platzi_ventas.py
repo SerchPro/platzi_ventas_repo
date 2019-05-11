@@ -12,9 +12,9 @@ def get_name():
     return client_name
 def activo(name):
     if name in clients:
-        return true
+        return True
     else:
-        return false
+        return False
 
 if opcion.upper()=='C':
     client_name=get_name()
@@ -24,11 +24,13 @@ elif opcion.upper()=='R':
     print(clients)
 
 elif opcion.upper()=='U':
-    if activo ==true:
-        print("Hello!!, insert the name of person to replace")
-        client_name = get_name()
+    print("Hello!!, insert the name of person to replace")
+    client_name = get_name()
+    if activo(client_name) ==True:
         print("isert the new name ")
         client_new_name = get_name()
+    else:
+        print("sorry!!,that name doesn't exist")
 
 elif opcion.upper()=='D':
     client_name=get_name()
